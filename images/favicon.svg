@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 기울어진 노란 포스트잇(떠도는 요구) 하나가 정리된 기능 카드 두 줄 위로 잡히는 모양. 밝은 톤(2026-10-21), 첫 화면과 같은 이야기 -->
+  <rect width="32" height="32" rx="8" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="none" stroke="#dfe3da"/>
+  <rect x="8" y="5" width="15" height="9" rx="1.5" fill="#f5cf4a" transform="rotate(-10 15.5 9.5)"/>
+  <rect x="6" y="17" width="20" height="4.5" rx="1.5" fill="#f4f6f2" stroke="#dfe3da" stroke-width=".8"/>
+  <rect x="8" y="18.4" width="2" height="2" rx=".5" fill="#7cc4ef"/>
+  <rect x="6" y="23.5" width="20" height="4.5" rx="1.5" fill="#f4f6f2" stroke="#dfe3da" stroke-width=".8"/>
+  <rect x="8" y="24.9" width="2" height="2" rx=".5" fill="#8fd8a8"/>
+</svg>
