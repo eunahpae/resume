@@ -1,0 +1,32 @@
+/* ==================================================
+   ANIMATIONS
+   ================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.btn-submit.is-loading .btn-label::after {
+  content: "";
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin-left: 8px;
+  border: 2px solid currentColor; border-top-color: transparent;
+  border-radius: 50%;
+  vertical-align: -2px;
+  animation: spin .6s linear infinite;
+}

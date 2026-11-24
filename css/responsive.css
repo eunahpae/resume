@@ -1,0 +1,62 @@
+/* ==================================================
+   RESPONSIVE — tablet / mobile
+   ================================================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-cta { justify-content: center; }
+  .hero-media { order: -1; max-width: 220px; margin: 0 auto; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-media { max-width: 280px; margin: 0 auto; }
+
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .bundle-grid { grid-template-columns: repeat(3, 1fr); }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .case-card-grid { grid-template-columns: 1fr; }
+  .project-modal-panel { padding: 24px; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .section { padding: 80px 20px; }
+  .scroll-cue { display: none; }  /* 세로로 쌓인 히어로에선 버튼 위에 겹친다 */
+
+  .nav { padding: 0 20px; }
+  .nav-links {
+    position: fixed; top: 64px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    padding: 8px 20px 16px;
+    transform: translateY(-12px);
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s var(--ease), transform .2s var(--ease);
+  }
+  .nav-links.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .nav-links a { padding: 12px 0; border-top: 1px solid var(--border); }
+  .nav-links a:first-child { border-top: none; }
+  .nav-toggle { display: flex; }
+
+  .hero-headline { white-space: normal; font-size: clamp(28px, 8vw, 40px); }
+
+  /* AI Workflow(9개)·흐름 범례(6개) 모두 3의 배수라 3열 grid면 마지막 하나가
+     혼자 남는 일이 없다. vw 축소로도 안 맞는 좁은 화면에서의 안전장치. */
+  .flow-diagram { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .flow-step { font-size: 12px; padding: 8px 6px; white-space: normal; }
+
+  .case-block { grid-template-columns: 1fr; gap: 6px; }
+  .project-modal { padding: 0; }
+  .project-modal-panel { max-width: 100%; max-height: 100vh; height: 100%; border-radius: 0; }
+
+  .card-grid { grid-template-columns: 1fr; }
+
+  .bundle-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
